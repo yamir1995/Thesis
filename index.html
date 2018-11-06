@@ -1,0 +1,17 @@
+<html>
+<body>
+<h1>Hello World</h1>
+<p id="paying" style="display:none;">Paying!</p>
+<script>
+window.onload = () => {
+  if (window.monetize) {
+    window.monetize({
+      receiver: '$spsp.ilp-test.com'
+    }).then(() => {
+      document.getElementById('paying').style = ''
+    })
+  }
+}
+</script>
+</body>
+</html>
